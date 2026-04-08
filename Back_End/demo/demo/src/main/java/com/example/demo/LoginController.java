@@ -3,16 +3,23 @@ package com.example.demo;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/login")
 @CrossOrigin(origins = "*")
 public class LoginController {
 
-    @PostMapping
+    @PostMapping("/cadastro")
+    public String cadastro(@RequestBody Usuario usuario) {
+        BancoFake.usuarios.add(usuario);
+        return "Usuário cadastrado com sucesso!";
+    }
+
+    @PostMapping("/login")
     public String login(@RequestBody Usuario usuario) {
-        if(usuario.getEmail().equals("juliococco2801@gmail.com") && usuario.getSenha().equals("12345        ")) {
-            return "Login OK";
-        } else {
-            return "Login inválido";
+        for (Usuario u : BancoFake.usuarios) {
+            if (u.getEmail().equals(usuario.getEmail()) &&
+                u.getSenha().equals(usuario.getSenha())) {
+                return "Login OK";
+            }
         }
+        return "Login inválido";
     }
 }

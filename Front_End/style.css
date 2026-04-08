@@ -1,31 +1,72 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fundo da página */
 body {
-  font-family: Arial;
-  background: #0f172a;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, black, black);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Container principal */
 .container {
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 320px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
+/* Títulos */
+h2 {
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333;
+}
+
+/* Inputs */
 input {
-  display: block;
-  margin: 10px auto;
-  padding: 10px;
-  width: 200px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
 }
 
+/* Efeito ao clicar */
+input:focus {
+    border-color: black;
+    box-shadow: 0 0 5px black;
+}
+
+/* Botões */
 button {
-  padding: 10px;
-  width: 100%;
-  background: #2563eb;
-  color: white;
-  border: none;
-  cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+/* Hover botão */
+button:hover {
+    background: #A9A9A9;
+}
+
+/* Espaçamento entre seções */
+.section {
+    margin-bottom: 20px;
 }

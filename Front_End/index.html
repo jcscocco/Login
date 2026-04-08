@@ -2,20 +2,30 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Login</title>
   <link rel="stylesheet" href="style.css">
+  <title>Login</title>
 </head>
 <body>
 
   <div class="container">
-    <h2>Login</h2>
-    
-    <input type="email" id="email" placeholder="Email">
-    <input type="password" id="senha" placeholder="Senha">
 
-    <button onclick="login()">Entrar</button>
+    <div class="section">
+      <h2>Cadastro</h2>
+      <input type="email" id="emailCadastro" placeholder="Email">
+      <input type="password" id="senhaCadastro" placeholder="Senha">
+      <button onclick="cadastro()">Cadastrar</button>
+    </div>
+
+    <div class="section">
+      <h2>Login</h2>
+      <input type="email" id="emailLogin" placeholder="Email">
+      <input type="password" id="senhaLogin" placeholder="Senha">
+      <button onclick="login()">Entrar</button>
+    </div>
+
   </div>
 
+</body>
   <script src="script.js"></script>
 </body>
 </html>

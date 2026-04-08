@@ -1,0 +1,8 @@
+--Comando Para Rodar O Back_End
+
+1.-  cd Back_End/demo/demo
+2.-  .\mvnw spring-boot:run
+--
+Se der certo -- "Tomcat started on port 8080" --
+
+
