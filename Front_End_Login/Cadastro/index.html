@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Auth</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <div class="toggle" id="toggle">
+    <button id="btnLogin" class="active" onclick="mostrarLogin()">Sign In</button>
+    <button id="btnCadastro" onclick="mostrarCadastro()">Sign Up</button>
+  </div>
+
+  <!-- LOGIN -->
+  <div id="loginForm" class="form active">
+    <h2>Bem-vindo</h2>
+    <input type="email" id="emailLogin" placeholder="Email">
+    <input type="password" id="senhaLogin" placeholder="Senha">
+    <button class="submit" onclick="login()">Entrar</button>
+  </div>
+
+  <!-- CADASTRO -->
+  <div id="cadastroForm" class="form">
+    <h2>Criar Conta</h2>
+    <input type="email" id="emailCadastro" placeholder="Email">
+    <input type="password" id="senhaCadastro" placeholder="Senha">
+    <button class="submit" onclick="cadastro()">Cadastrar</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
