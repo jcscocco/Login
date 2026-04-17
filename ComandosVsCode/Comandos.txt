@@ -4,5 +4,3 @@
 2.-  .\mvnw spring-boot:run
 --
 Se der certo -- "Tomcat started on port 8080" --
-
-

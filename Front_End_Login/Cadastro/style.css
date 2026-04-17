@@ -5,7 +5,7 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* FUNDO */
+
 body {
   height: 100vh;
   display: flex;
@@ -14,7 +14,7 @@ body {
   background: radial-gradient(circle at top, #1a0000, #000000 70%);
 }
 
-/* CONTAINER */
+
 .container {
   width: 360px;
   background: rgba(20, 20, 20, 0.85);
@@ -26,13 +26,13 @@ body {
     inset 0 0 0 1px rgba(255,255,255,0.05);
 }
 
-/* TOPO */
+
 .toggle {
   display: flex;
   position: relative;
 }
 
-/* BARRA VINHO */
+
 .toggle::after {
   content: "";
   position: absolute;
@@ -44,12 +44,12 @@ body {
   transition: 0.4s ease;
 }
 
-/* MOVE PRA SIGN UP */
+
 .toggle.signup-active::after {
   left: 50%;
 }
 
-/* BOTÕES */
+
 .toggle button {
   flex: 1;
   padding: 15px;
@@ -70,7 +70,7 @@ body {
   color: #ccc;
 }
 
-/* FORM */
+
 .form {
   padding: 35px;
   display: none;
@@ -92,14 +92,14 @@ body {
   }
 }
 
-/* TITULO */
+
 h2 {
   text-align: center;
   margin-bottom: 25px;
   color: white;
 }
 
-/* INPUT */
+
 input {
   width: 100%;
   padding: 13px;
@@ -116,7 +116,7 @@ input:focus {
   box-shadow: 0 0 10px rgba(139, 0, 0, 0.6);
 }
 
-/* BOTÃO */
+
 .submit {
   width: 100%;
   padding: 13px;
@@ -142,7 +142,7 @@ input:focus {
   transform: scale(0.97);
 }
 
-/* BRILHO */
+
 .submit::before {
   content: "";
   position: absolute;

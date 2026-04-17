@@ -1,23 +1,25 @@
-package com.example.demo;
+package com.example.demo.model;
 
 import jakarta.persistence.*;
-import org.hibernate.annotations.UuidGenerator;
-
-import java.util.UUID;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
-@Table(name = "usuarios")
 public class Usuario {
 
     @Id
-    @GeneratedValue
-    @UuidGenerator
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
+    @Email(message = "Email inválido")
+    @NotBlank(message = "Email é obrigatório")
+    @Column(unique = true)
     private String email;
+
+    @NotBlank(message = "Senha obrigatória")
     private String senha;
 
-    public UUID getId() {
+    public Long getId() {
         return id;
     }
 
