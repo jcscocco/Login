@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Julio Cesar | Portfolio</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+  <div class="welcome-bar" id="welcomeBar">
+    👋 Bem-vindo, <strong id="userEmail">usuário</strong>!
+  </div>
+
+  <header>
+    <div class="logo">julio<span>.</span>dev</div>
+    <nav>
+      <a href="#projetos">Projetos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+      <button class="btn-logout" onclick="logout()">Sair</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-tag">Full Stack em aprendizado</div>
+    <h1>Olá, sou<br><span>Julio Cesar</span></h1>
+    <p>Desenvolvedor de software apaixonado por construir projetos práticos. Trabalho com front-end e back-end, sempre buscando entender o funcionamento completo de uma aplicação.</p>
+    <div class="hero-btns">
+      <a href="#projetos" class="btn-primary">Ver Projetos</a>
+      <a href="#contato" class="btn-secondary">Entrar em contato</a>
+    </div>
+  </section>
+
+  <div class="skills-bar">
+    <span class="skill-tag">HTML</span>
+    <span class="skill-tag">CSS</span>
+    <span class="skill-tag">JavaScript</span>
+    <span class="skill-tag">Java</span>
+    <span class="skill-tag">Spring Boot</span>
+    <span class="skill-tag">Supabase</span>
+    <span class="skill-tag">PostgreSQL</span>
+    <span class="skill-tag">Git & GitHub</span>
+    <span class="skill-tag">REST API</span>
+  </div>
+
+  <section class="section" id="projetos">
+    <div class="section-header">
+      <div class="section-title"><span>//</span> Projetos</div>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-icon">🔐</div>
+        <h3>Sistema de Login</h3>
+        <p>Sistema completo de autenticação com cadastro, login, confirmação por email e integração com Supabase.</p>
+        <div class="project-tags">
+          <span class="project-tag">HTML/CSS/JS</span>
+          <span class="project-tag">Java</span>
+          <span class="project-tag">Spring Boot</span>
+          <span class="project-tag">Supabase</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">🚀</div>
+        <h3>Em breve</h3>
+        <p>Novo projeto em desenvolvimento. Sempre explorando novas tecnologias e construindo aplicações mais completas.</p>
+        <div class="project-tags">
+          <span class="project-tag">Em breve</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon">💡</div>
+        <h3>Em breve</h3>
+        <p>Aprendendo fazendo. Cada projeto é uma oportunidade de evoluir e aplicar novos conhecimentos na prática.</p>
+        <div class="project-tags">
+          <span class="project-tag">Em breve</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="about-section" id="sobre">
+    <div class="about-grid">
+      <div class="about-text">
+        <h2>Sobre <span>mim</span></h2>
+        <p>Estou em fase de desenvolvimento na área de tecnologia, com foco principal em programação e construção de projetos práticos.</p>
+        <p>Trabalho tanto com front-end quanto back-end, o que me permite entender o funcionamento completo de uma aplicação. Sou uma pessoa que aprende fazendo — gosto de testar, errar, ajustar e entender na prática.</p>
+        <p>Tenho experiência com versionamento de código usando Git e GitHub, e busco evoluir constantemente para criar aplicações mais completas e bem estruturadas.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card">
+          <div class="stat-number">3+</div>
+          <div class="stat-label">Tecnologias</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">1+</div>
+          <div class="stat-label">Projetos</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Dedicação</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">∞</div>
+          <div class="stat-label">Vontade de aprender</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contato">
+    <h2>Vamos <span>conversar?</span></h2>
+    <p>Estou aberto a oportunidades, parcerias e novos projetos.</p>
+    <a href="mailto:juliococco2801@gmail.com" class="btn-primary">juliococco2801@gmail.com</a>
+  </section>
+
+  <footer>
+    <p>© 2026 <span>Julio Cesar</span>. Todos os direitos reservados.</p>
+    <p>Feito com <span>♥</span> e muito código</p>
+  </footer>
+
+  <script type="module" src="home.js"></script>
+</body>
+</html>
