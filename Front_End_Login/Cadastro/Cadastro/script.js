@@ -170,12 +170,11 @@ async function login() {
     return;
   }
 
-  // 👇 Redireciona para a home após login
   window.location.replace('../Home/home.html')
+}
 
 window.mostrarLogin = mostrarLogin;
 window.mostrarCadastro = mostrarCadastro;
 window.toggleSenha = toggleSenha;
 window.cadastro = cadastro;
 window.login = login;
-}
