@@ -4,8 +4,19 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
+
 @Entity
 public class Usuario {
+
+    @Column(unique = true)
+    private String token;
+
+    private boolean confirmado = false;
+
+    public String getToken() { return token; }
+    public void setToken(String token) { this.token = token; }
+    public boolean isConfirmado() { return confirmado; }
+    public void setConfirmado(boolean confirmado) { this.confirmado = confirmado; }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

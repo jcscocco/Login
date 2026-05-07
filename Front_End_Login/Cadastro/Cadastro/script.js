@@ -170,7 +170,7 @@ async function login() {
     return;
   }
 
-  window.location.replace('../Home/home.html')
+  window.location.replace('./Home/home.html')
 }
 
 window.mostrarLogin = mostrarLogin;
