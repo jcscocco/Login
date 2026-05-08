@@ -16,7 +16,7 @@ public class EmailService {
     public void enviarEmailConfirmacao(String destinatario, String token) {
         Resend resend = new Resend(resendApiKey);
 
-        String link = "http://localhost:8080/auth/confirmar?token=" + token;
+        String link = "https://login-production-c459.up.railway.app/auth/confirmar?token=" + token;
 
         CreateEmailOptions params = CreateEmailOptions.builder()
             .from("onboarding@resend.dev")

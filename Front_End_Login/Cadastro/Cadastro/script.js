@@ -118,19 +118,14 @@ async function cadastro() {
 
   if (!valido) return;
 
-  const { data, error } = await supabase.auth.signUp({ email, password: senha })
+  const resposta = await fetch('https://login-production-c459.up.railway.app/auth/cadastro', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, senha })
+  })
 
-  if (error) {
-    alert('Erro: ' + error.message);
-    return;
-  }
-
-  if (data.user && data.user.identities && data.user.identities.length === 0) {
-    mostrarErro('emailCadastro', 'Este email já está cadastrado.');
-    return;
-  }
-
-  alert('✅ Cadastro realizado! Verifique seu email para confirmar a conta.')
+  const resultado = await resposta.text()
+  alert(resultado)
 }
 
 // =================== LOGIN ===================
@@ -157,21 +152,19 @@ async function login() {
 
   if (!valido) return;
 
-  const { data, error } = await supabase.auth.signInWithPassword({ email, password: senha })
+  const resposta = await fetch('https://login-production-c459.up.railway.app/auth/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, senha })
+  })
 
-  if (error) {
-    if (error.message.includes('Email not confirmed')) {
-      alert('⚠️ Email não confirmado! Verifique sua caixa de entrada.')
-    } else if (error.message.includes('Invalid login credentials')) {
-      alert('❌ Email ou senha incorretos.')
-    } else {
-      alert('Erro: ' + error.message)
-    }
-    return;
+  const resultado = await resposta.text()
+
+  if (resultado === 'Login realizado com sucesso') {
+    window.location.replace('https://login-theta-kohl.vercel.app/Home/home.html')
+  } else {
+    alert(resultado)
   }
-
-  // ✅ Redireciona para a home corretamente
-  window.location.replace('https://login-theta-kohl.vercel.app/Home/home.html')
 }
 
 window.mostrarLogin = mostrarLogin;
