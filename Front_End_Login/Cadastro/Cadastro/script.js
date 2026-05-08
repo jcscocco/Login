@@ -170,7 +170,8 @@ async function login() {
     return;
   }
 
-  window.location.replace('./Home/home.html')
+  // ✅ Redireciona para a home corretamente
+  window.location.replace('https://login-theta-kohl.vercel.app/Home/home.html')
 }
 
 window.mostrarLogin = mostrarLogin;
