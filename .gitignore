@@ -1,0 +1,27 @@
+# Java / Spring
+/target/
+*.class
+*.jar
+*.war
+*.log
+
+# Environment variables and local config
+.env
+.env.*
+!.env.example
+application-local.properties
+application-dev.properties
+
+# IDEs and editors
+.idea/
+.vscode/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node / frontend dependencies
+node_modules/
+dist/
+build/
